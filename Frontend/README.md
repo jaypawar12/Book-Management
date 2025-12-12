@@ -8,8 +8,6 @@ A modern, responsive, and aesthetically pleasing React application for managing 
 
 ## 📸 Application Preview
 
-## 📸 Application Preview
-
 ### 🏠 Home Page
 ![Home Page](./public/Home.png)
 
