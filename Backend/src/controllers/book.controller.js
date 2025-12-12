@@ -61,20 +61,32 @@ exports.updateBook = async (req, res) => {
         if (req.file) {
             req.body.cover_image = req.file.path;
         }
+
         req.body.updated_at = moment().format("DD/MM/YYYY, h:mm:ss a");
 
         const updated = await bookService.updateBook(req.params.bookId, req.body);
 
         if (!updated) {
-            return res.json(errorResponse(StatusCodes.BAD_REQUEST, true, MSG.BOOK_NOT_FOUND));
+            return res.json(
+                errorResponse(StatusCodes.BAD_REQUEST, true, MSG.BOOK_NOT_FOUND)
+            );
         }
 
-        return res.json(successResponse(StatusCodes.OK, false, MSG.BOOK_UPDATED, updated));
+        return res.json(
+            successResponse(StatusCodes.OK, false, MSG.BOOK_UPDATED, updated)
+        );
     } catch (err) {
-        console.log(err);
-        return res.json(errorResponse(StatusCodes.INTERNAL_SERVER_ERROR, true, MSG.SERVER_ERROR));
+        console.error(err);
+        return res.json(
+            errorResponse(
+                StatusCodes.INTERNAL_SERVER_ERROR,
+                true,
+                MSG.SERVER_ERROR
+            )
+        );
     }
 };
+
 
 exports.deleteBook = async (req, res) => {
     try {

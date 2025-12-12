@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# 📚 Book Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and aesthetically pleasing React application for managing a personal digital library. This frontend interacts with a Node.js/Express backend to perform full CRUD operations on a book collection.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🎨 Premium UI/UX:** Built with a dark "Black & Orange" theme, featuring glassmorphism, smooth animations (`framer-motion`), and responsive design.
 
-## React Compiler
+## 📸 Application Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Application Preview
 
-## Expanding the ESLint configuration
+### 🏠 Home Page
+![Home Page](./public/Home.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📚 View Books Library
+![View Books](./public/ViewAllBook.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ➕ Add Book / Edit Book
+![Add Book](./public/AddBook.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🛠️ Services Page
+![Services](./public/Service.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **📱 Responsive Layout:** Optimized for desktops, tablets, and mobile devices.
+- **🔍 Advanced Search & Filter:** Real-time searching by title, author, or category. Filter by categories and sort by price, title, or date.
+- **🖼️ Image Upload:** Drag-and-drop cover image upload with preview and "Update/Remove" functionality.
+- **⚡ Reactive Updates:** Instant UI updates and toast notifications (`react-hot-toast`) for user actions.
+- **📊 Dashboard:** Home page with parallax effects and library statistics.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [React](https://react.dev/) (v19) with [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **State Management:** [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Routing:** [React Router v7](https://reactrouter.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **HTTP Client:** [Axios](https://axios-http.com/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd Frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and visit `http://localhost:5173`.
+
+## 📂 Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+│   ├── common/     # Button, Input, Modal, Card
+│   └── layout/     # Navbar, Footer
+├── config/         # App configuration (API URLs)
+├── pages/          # Page components (Home, ViewBooks, AddBook)
+├── services/       # API integration services
+├── store/          # Redux state management
+├── types/          # TypeScript interfaces
+└── utils/          # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔌 API Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The frontend is configured to proxy API requests to `http://localhost:8000`. 
+Check `vite.config.ts` and `src/config/api.ts` for configuration details.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+Distributed under the MIT License.
