@@ -64,19 +64,15 @@ const features = [
 export const Services: React.FC = () => {
     return (
         <div className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-gray-900 via-black to-orange-900/20">
-            {/* Animated Background Elements */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-0 left-1/4 h-[500px] w-[500px] animate-float rounded-full bg-gradient-to-r from-orange-500/10 to-amber-500/10 blur-3xl"></div>
                 <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] animate-float-slow rounded-full bg-gradient-to-r from-orange-600/10 to-red-500/10 blur-3xl"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-[800px] animate-pulse-slow rounded-full bg-gradient-to-r from-orange-400/5 to-orange-500/5 blur-3xl"></div>
 
-                {/* Grid Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
             </div>
 
-            {/* Main Container */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header Section */}
                 <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-orange-500/20 p-8 sm:p-12 lg:p-16 mb-16">
                     <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-orange-500/10 via-transparent to-orange-600/10"></div>
 

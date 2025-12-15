@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
     ];
 
     return (
-        <nav className="bg-black/20 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-orange-500/10">
+        <nav className="bg-black/40 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-orange-500/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-20">
                     <div className="flex items-center">
@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
                                 className={({ isActive }) =>
                                     `relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${isActive
                                         ? 'text-white'
-                                        : 'text-gray-400 hover:text-white'
+                                        : 'text-gray-300 hover:text-white'
                                     }`
                                 }
                             >

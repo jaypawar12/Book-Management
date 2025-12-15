@@ -27,7 +27,6 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
     const isDark = theme === 'dark';
 
-    // Close on Escape key
     useEffect(() => {
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose();
@@ -36,7 +35,6 @@ export const Modal: React.FC<ModalProps> = ({
         return () => window.removeEventListener('keydown', handleEsc);
     }, [isOpen, onClose]);
 
-    // Prevent background scrolling when modal is open
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';

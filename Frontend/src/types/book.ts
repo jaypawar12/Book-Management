@@ -1,5 +1,5 @@
 export interface Book {
-    _id: string; // Mongoose default
+    _id: string; 
     title: string;
     author: string;
     category: string;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../utils/hooks';
 import { fetchBooks, requestDeleteBook } from '../store/slices/bookSlice';
-import { Card } from '../components/common/Card';
 import { Modal } from '../components/common/Modal';
 import { Button } from '../components/common/Button';
 import type { Book } from '../types/book';
@@ -67,7 +66,6 @@ export const ViewBooks: React.FC = () => {
         }
     };
 
-    // Get unique categories for filtering
     const safeBooks = Array.isArray(books) ? books : [];
     const categories = [...new Set(safeBooks.map(book => book.category))];
 
@@ -148,7 +146,6 @@ export const ViewBooks: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 py-8">
-            {/* Animated Background Elements */}
             <div className="fixed inset-0 -z-10 overflow-hidden">
                 <div className="absolute -top-40 -right-40 h-[800px] w-[800px] animate-float rounded-full bg-gradient-to-r from-orange-500/5 to-amber-500/5 blur-3xl"></div>
                 <div className="absolute -bottom-40 -left-40 h-[700px] w-[700px] animate-float-slow rounded-full bg-gradient-to-r from-orange-600/3 to-red-500/3 blur-3xl"></div>

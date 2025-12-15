@@ -5,29 +5,21 @@ import { Button } from '../components/common/Button';
 export const Home: React.FC = () => {
     return (
         <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-orange-900/20">
-            {/* Animated Background Elements */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute -top-40 -right-40 h-[800px] w-[800px] animate-float rounded-full bg-gradient-to-r from-orange-500/10 to-orange-600/10 blur-3xl"></div>
                 <div className="absolute -bottom-40 -left-40 h-[600px] w-[600px] animate-float-slow rounded-full bg-gradient-to-r from-orange-600/5 to-orange-700/5 blur-3xl"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[1000px] w-[1000px] animate-pulse-slow rounded-full bg-gradient-to-r from-orange-400/5 to-orange-500/5 blur-3xl"></div>
 
-                {/* Grid Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
             </div>
 
-            {/* Main Container */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-                {/* Hero Section Container */}
                 <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-orange-500/20 overflow-hidden">
-                    {/* Container Decorative Borders */}
                     <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-orange-500/10 via-transparent to-orange-600/10"></div>
 
-                    {/* Content Grid */}
                     <div className="relative grid lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 lg:p-16">
 
-                        {/* Left Column - Text Content */}
                         <div className="flex flex-col justify-center space-y-8 animate-fade-in">
-                            {/* Badge */}
                             <div className="inline-flex">
                                 <div className="relative group">
                                     <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
@@ -37,7 +29,6 @@ export const Home: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Main Heading */}
                             <div className="space-y-4">
                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
                                     <span className="block text-white animate-slide-up">
@@ -48,13 +39,11 @@ export const Home: React.FC = () => {
                                     </span>
                                 </h1>
 
-                                {/* Description */}
                                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl animate-fade-in animation-delay-300">
                                     Discover, manage, and explore a vast collection of books. Whether you are adding to your personal library or browsing for your next adventure, we have you covered.
                                 </p>
                             </div>
 
-                            {/* CTA Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-400">
                                 <NavLink to="/view-books" className="group relative flex-1">
                                     <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-orange-600 to-orange-500 opacity-75 blur transition-all duration-500 group-hover:opacity-100 group-hover:blur-lg"></div>
@@ -88,7 +77,6 @@ export const Home: React.FC = () => {
                                 </NavLink>
                             </div>
 
-                            {/* Stats Container */}
                             <div className="grid grid-cols-2 gap-6 pt-8 animate-fade-in animation-delay-500">
                                 {[
                                     { value: "10K+", label: "Books Collection", icon: "📚" },
@@ -116,18 +104,14 @@ export const Home: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Right Column - Image */}
                         <div className="relative animate-float-slow">
                             <div className="relative group">
-                                {/* Floating Elements */}
                                 <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-amber-500/20 rounded-full blur-xl animate-pulse-slow"></div>
                                 <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-gradient-to-tr from-orange-500/20 to-orange-600/20 rounded-full blur-xl animate-pulse-slow animation-delay-1000"></div>
 
-                                {/* Image Frame */}
                                 <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-600/10 z-10"></div>
 
-                                    {/* Book Decorative Elements */}
                                     <div className="absolute top-4 left-4 z-20">
                                         <div className="bg-gray-900/90 backdrop-blur-sm rounded-lg p-3 shadow-lg animate-float border border-orange-500/20">
                                             <span className="text-2xl text-orange-400">📖</span>
@@ -139,19 +123,16 @@ export const Home: React.FC = () => {
                                         </div>
                                     </div>
 
-                                    {/* Main Image */}
                                     <img
                                         src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                                         alt="Bookshelf"
                                         className="w-full h-[500px] lg:h-[600px] object-cover rounded-3xl transform group-hover:scale-105 transition-transform duration-700"
                                     />
 
-                                    {/* Image Overlay Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-3xl"></div>
                                 </div>
                             </div>
 
-                            {/* Floating Quote */}
                             <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-gray-900/90 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-orange-500/20 animate-fade-in animation-delay-700 max-w-xs">
                                 <div className="flex items-start gap-3">
                                     <div className="text-2xl text-orange-500">💭</div>
@@ -166,11 +147,9 @@ export const Home: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Container Bottom Decoration */}
                     <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
                 </div>
 
-                {/* Features Section */}
                 <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
                         {
@@ -223,7 +202,6 @@ export const Home: React.FC = () => {
                 </div>
             </div>
 
-            {/* Add these styles to your global CSS or Tailwind config */}
             <style>{`
                 @keyframes float {
                     0%, 100% { transform: translateY(0px) rotate(0deg); }

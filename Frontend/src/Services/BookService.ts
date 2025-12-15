@@ -2,7 +2,6 @@ import axios from 'axios';
 import { BOOKS } from '../config/api';
 import type { Book } from '../types/book';
 
-// Helper to get form data for multipart/form-data requests
 const createFormData = (book: Omit<Book, '_id'>, coverImage?: File) => {
     const formData = new FormData();
     formData.append('title', book.title);
@@ -11,15 +10,12 @@ const createFormData = (book: Omit<Book, '_id'>, coverImage?: File) => {
     formData.append('price', book.price.toString());
     formData.append('publish_year', book.publish_year.toString());
     formData.append('isbn_num', book.isbn_num.toString());
-    // Removed description as it is not in backend model.
 
     if (coverImage) {
         formData.append('cover_image', coverImage);
     }
     return formData;
 };
-
-// Interface for Backend Response Wrapper
 interface ApiResponse<T> {
     status: number;
     error: boolean;
